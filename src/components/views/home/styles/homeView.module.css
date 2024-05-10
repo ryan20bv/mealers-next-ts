@@ -1,0 +1,22 @@
+.home h1 {
+	font-family: 'Montserrat', sans-serif;
+	background: linear-gradient(90deg, #f9572a, #ffc905);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.home a:last-child {
+	background: linear-gradient(90deg, #f9572a, #ff9b05);
+}
+
+.home a:hover,
+.home a:active {
+	background: linear-gradient(90deg, #fd4715, #f9b241);
+}
+
+.home a:first-child:hover,
+.home a:first-child:active {
+	background: transparent;
+	color: #f9b241;
+}

@@ -1,15 +1,12 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
-import {usePathname} from 'next/navigation';
+
 import logoImg from '@/assets/logo.png';
 import RootBackgroundView from '../background/root-backgroundView';
 import NavLink from './nav-link';
 import classes from './styles/main-header.module.css';
 
 const MainHeaderView = () => {
-	const pathname = usePathname();
 	return (
 		<>
 			<RootBackgroundView />

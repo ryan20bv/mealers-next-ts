@@ -1,5 +1,7 @@
+import HomeView from '@/components/views/home/homeView';
+
 const RootPage = () => {
-	return <div>Root Page</div>;
+	return <HomeView />;
 };
 
 export default RootPage;

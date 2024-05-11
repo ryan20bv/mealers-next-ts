@@ -2,7 +2,7 @@
 import {redirect} from 'next/navigation';
 
 import {saveMeal} from './mealsApi';
-import {IShareMealActionType} from '@/app/dataTypes/datatypes';
+import {IShareMealActionType} from '@/dataTypes/datatypes';
 import {revalidatePath} from 'next/cache';
 
 function isInvalidText(text: string): boolean {
@@ -30,7 +30,6 @@ export const shareMealAction = async (
 
 	const meal = {
 		title: formData.get('title') as string,
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		image: formData.get('image') as any,
 		summary: formData.get('summary') as string,
 		instructions: formData.get('instructions') as string,

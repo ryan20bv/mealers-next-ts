@@ -1,5 +1,7 @@
+import MealsView from '@/components/views/meals/mealsView';
+
 const MealsPage = () => {
-	return <div>Meal page</div>;
+	return <MealsView />;
 };
 
 export default MealsPage;

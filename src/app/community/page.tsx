@@ -1,5 +1,7 @@
+import CommunityView from '@/components/views/community/communityView';
+
 const CommunityPage = () => {
-	return <div>Community Page</div>;
+	return <CommunityView />;
 };
 
 export default CommunityPage;

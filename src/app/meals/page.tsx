@@ -1,5 +1,12 @@
+import MealsView from '@/components/views/meals/mealsView';
+
+export const metadata = {
+	title: 'All meals',
+	description: 'Browse the delicious meals shared by our vibrant community.'
+};
+
 const MealsPage = () => {
-	return <div>Meal page</div>;
+	return <MealsView />;
 };
 
 export default MealsPage;

@@ -1,12 +1,17 @@
+import {Suspense} from 'react';
 import Link from 'next/link';
 import HeaderUI from '@/components/ui/header';
 import classes from './styles/meals.module.css';
 import {getMeals} from '@/lib/mealsApi';
 import MealsGrid from './modules/meals-grid';
+import {TMeal} from '@/dataTypes/datatypes';
 
-const MealsView = async () => {
-	const meals = await getMeals();
+async function Meals() {
+	const meals: TMeal[] = (await getMeals()) as TMeal[];
+	return <MealsGrid meals={meals} />;
+}
 
+const MealsView = () => {
 	return (
 		<>
 			<HeaderUI classes={classes}>
@@ -26,10 +31,9 @@ const MealsView = async () => {
 				</p>
 			</HeaderUI>
 			<main className={classes.main}>
-				<MealsGrid meals={meals} />
-				{/* <Suspense fallback={<p className={classes.loading}>Fetching meals...</p>}>
+				<Suspense fallback={<p className={classes.loading}>Fetching meals...</p>}>
 					<Meals />
-				</Suspense> */}
+				</Suspense>
 			</main>
 		</>
 	);

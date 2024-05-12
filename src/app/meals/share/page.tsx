@@ -1,5 +1,7 @@
+import ShareMealView from '@/components/views/meals/shareMealView';
+
 const ShareMealPage = () => {
-	return <div>Share Meal Page</div>;
+	return <ShareMealView />;
 };
 
 export default ShareMealPage;

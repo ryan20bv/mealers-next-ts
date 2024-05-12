@@ -5,6 +5,7 @@ import classes from './styles/meals.module.css';
 import {getMeals} from '@/lib/mealsApi';
 import MealsGrid from './modules/meals-grid';
 import {TMeal} from '@/dataTypes/datatypes';
+import LoadingView from './modules/loadingView';
 
 async function Meals() {
 	const meals: TMeal[] = (await getMeals()) as unknown as TMeal[];
@@ -31,7 +32,7 @@ const MealsView = () => {
 				</p>
 			</HeaderUI>
 			<main className={classes.main}>
-				<Suspense fallback={<p className={classes.loading}>Fetching meals...</p>}>
+				<Suspense fallback={<LoadingView />}>
 					<Meals />
 				</Suspense>
 			</main>

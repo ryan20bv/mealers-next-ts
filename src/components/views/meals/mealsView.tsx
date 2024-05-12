@@ -7,7 +7,7 @@ import MealsGrid from './modules/meals-grid';
 import {TMeal} from '@/dataTypes/datatypes';
 
 async function Meals() {
-	const meals: TMeal[] = (await getMeals()) as TMeal[];
+	const meals: TMeal[] = (await getMeals()) as unknown as TMeal[];
 	return <MealsGrid meals={meals} />;
 }
 
